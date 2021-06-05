@@ -1,0 +1,60 @@
+import java.util.*;
+import java.io.*;
+
+public class StackWithMax {
+
+    
+    class FastScanner {
+        StringTokenizer tok = new StringTokenizer("");
+        BufferedReader in;
+
+        FastScanner() {
+            in = new BufferedReader(new InputStreamReader(System.in));
+        }
+
+        String next() throws IOException {
+            while (!tok.hasMoreElements())
+                tok = new StringTokenizer(in.readLine());
+            return tok.nextToken();
+        }
+        int nextInt() throws IOException {
+            return Integer.parseInt(next());
+        }
+    }
+    
+
+    public void solve() throws IOException {
+        FastScanner scanner = new FastScanner();
+
+        Stack<Integer> mainStack = new Stack<Integer> ();  // create empty main stack 
+        Stack<Integer> trackStack = new Stack<Integer> (); // create empty another Stack to keep track of max element 
+        
+        int queries = scanner.nextInt();
+        for (int qi = 0; qi < queries; ++qi) { //read index0=>store in qi=>compare to next queries=>if still less than=>+1=>loop next round
+            String operation = scanner.next();//read nextLine=>store in operation
+            
+            int num = 0;
+            if ("push".equals(operation)) {    //if The "push" new number
+                int value = scanner.nextInt(); //compare value and its equal
+                mainStack.push(value);         //push it in mainStack
+            
+             if(trackStack.isEmpty()) { 
+             	trackStack.push(value);
+              
+                
+            } else if ("pop".equals(operation)) {
+                mainStack.pop();
+            } else if ("max".equals(operation)) {
+                System.out.println(Collections.max(mainStack));
+            }
+         }
+        }     
+    }
+	
+	
+    static public void main(String[] args) throws IOException {
+		new StackWithMax().solve(); 	   
+	    
+    }	
+	
+}

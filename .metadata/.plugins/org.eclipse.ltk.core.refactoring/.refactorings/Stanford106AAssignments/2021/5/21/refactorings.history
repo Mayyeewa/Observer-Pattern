@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;week7.package-info.java&apos; to &apos;ObjectsAndDataStructures.java&apos;&#x0A;- Original project: &apos;Stanford106AAssignments&apos;&#x0A;- Original element: &apos;week7.package-info.java&apos;&#x0A;- Renamed element: &apos;week7.ObjectsAndDataStructures.java&apos;" description="Rename compilation unit &apos;package-info.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;week7{package-info.java" name="ObjectsAndDataStructures.java" references="false" stamp="1621457739397" version="1.0"/>
+</session>

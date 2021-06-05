@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;MaximumOccuringCharacter.java&apos; to &apos;Solution.java&apos;&#x0A;- Original project: &apos;Hackar&apos;&#x0A;- Original element: &apos;MaximumOccuringCharacter.java&apos;&#x0A;- Renamed element: &apos;Solution.java&apos;" description="Rename compilation unit &apos;MaximumOccuringCharacter.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{MaximumOccuringCharacter.java" name="Solution.java" references="false" stamp="1622499434202" version="1.0"/>
+</session>

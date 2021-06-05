@@ -1,0 +1,66 @@
+import java.util.*;
+import java.io.*;
+
+public class StackWithMax {
+
+    
+    class FastScanner {
+        StringTokenizer tok = new StringTokenizer("");
+        BufferedReader in;
+
+        FastScanner() {
+            in = new BufferedReader(new InputStreamReader(System.in));
+        }
+
+        String next() throws IOException {
+            while (!tok.hasMoreElements())
+                tok = new StringTokenizer(in.readLine());
+            return tok.nextToken();
+        }
+        int nextInt() throws IOException {
+            return Integer.parseInt(next());
+        }
+    }
+    
+
+    public void solve() throws IOException {
+        FastScanner scanner = new FastScanner();
+        Stack<Integer> mainStack = new Stack<Integer> ();  // create empty main stack 
+        Stack<Integer> trackStack = new Stack<Integer> (); // create empty another Stack to keep track of max element 
+        int queries = scanner.nextInt();
+  
+        for (int qi = 0; qi < queries; ++qi) { //read index0=>store in qi=>compare to next queries=>if still less than=>+1=>loop through stack
+            String operation = scanner.next();//read nextLine=>store in operation
+            if ("push".equals(operation)) {    //if The "push" is operation
+            	int value = scanner.nextInt(); // scan value(number)
+                	mainStack.push(value);         // then push it in mainStack
+         
+                if (trackStack.isEmpty()) {
+                    trackStack.push(value);
+                }
+                if (trackStack.peek() <
+            if (value > trackStack.peek()) {
+            	trackStack.push(value);
+            	if (value < trackStack.peek())
+            		trackStack.push(trackStack.peek());
+            }
+            	
+            } else if ("pop".equals(operation)) {
+            	if (!mainStack.isEmpty(){
+                mainStack.pop();
+                trackStack.pop();
+                
+            } else if ("max".equals(operation)) {
+                System.out.println(trackStack.peek());
+            }
+         }
+        }    
+    } 
+	
+	
+    static public void main(String[] args) throws IOException {
+		new StackWithMax().solve(); 	   
+	    
+    }	
+	
+}
